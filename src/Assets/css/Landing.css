@@ -1,0 +1,41 @@
+.heroStyling {
+    color: white;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.cursor {
+    display: inline-block;
+    position: relative;
+    text-decoration: underline;
+    text-shadow: 0.5px 0.5px 2px #4d3900;
+
+}
+
+.cursor::after {
+    content: " ";
+    margin: auto;
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 1px;
+    height: 70%;
+    background-color: #B58900;
+    animation: cursor-animation 1.5s step-end infinite;
+}
+
+@keyframes cursor-animation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
