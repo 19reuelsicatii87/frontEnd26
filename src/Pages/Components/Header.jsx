@@ -70,10 +70,10 @@ function Header() {
                                             Experience
                                         </a>
                                         <ul className="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
-                                            <li><Link className="dropdown-item nav-link text-center fw-bold" to="/scrummaster">Scrum Master</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center fw-bold" to="/testmanager">Test Manager</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center fw-bold" to="/automationarchitect">Automation Architect</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center fw-bold" to="/fullstackdeveloper">Fullstack Developer</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center" to="/scrummaster">Scrum Master</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center" to="/testmanager">Test Manager</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center" to="/automationarchitect">Automation Architect</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center" to="/fullstackdeveloper">Fullstack Developer</Link></li>
                                         </ul>
                                     </li>
                                     <li className="nav-item">
