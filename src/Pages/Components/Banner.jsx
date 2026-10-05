@@ -41,7 +41,7 @@ function Banner() {
 
     return (
         <section id="banner" className=" d-flex justify-content-top heroStyling"
-            style={{ backgroundImage: `url(/Images/Banner2.jpg)` }}>
+            style={{ backgroundImage: `url(/Images/Banner1.jpg)` }}>
             <div className='container d-flex flex-column justify-content-start pt-2 pt-md-0'>
                 <div className='row'>
                     <div className='offset-md-7 col-md-6' >
