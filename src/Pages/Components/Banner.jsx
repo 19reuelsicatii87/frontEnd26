@@ -41,11 +41,11 @@ function Banner() {
 
     return (
         <section id="banner" className=" d-flex justify-content-top heroStyling"
-            style={{ backgroundImage: `url(/Images/Hero01.jpg)` }}>
-            <div className='container'>
+            style={{ backgroundImage: `url(/Images/Banner2.jpg)` }}>
+            <div className='container d-flex flex-column justify-content-start pt-2 pt-md-0'>
                 <div className='row'>
-                    <div className='offset-md-4 col-md-6' >
-                        <div className="d-flex align-items-center" style={{ height: '40vh' }}>
+                    <div className='offset-md-7 col-md-6' >
+                        <div className="d-flex align-items-center bannerText">
                             <div className="w-100">
                                 <h1 className="w-100 text-end h1 fw-bold text-primary"
                                     style={{ fontFamily: "Arial Black, Impact", textShadow: "5px 5px 5px #4d3900" }}>REUEL SICAT II</h1>

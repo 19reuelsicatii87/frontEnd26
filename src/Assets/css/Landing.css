@@ -6,6 +6,35 @@
     height: 100vh;
 }
 
+@media (max-width: 767.98px) {
+    .heroStyling {
+        height: auto;
+        aspect-ratio: 794 / 572;
+        background-size: contain;
+        background-position: center;
+        background-color: #f7f5f2;
+    }
+
+    .bannerText h1 {
+        font-size: 1.15rem;
+        margin-bottom: 0;
+    }
+
+    .bannerText p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .bannerText {
+        height: 40vh;
+    }
+}
+
+#menu .navbar-toggler:not(.collapsed) {
+    display: none;
+}
+
 .cursor {
     display: inline-block;
     position: relative;

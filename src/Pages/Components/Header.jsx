@@ -39,11 +39,11 @@ function Header() {
             <div id="menu">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                     <div className="container">
-                        <div>
+                        <div className="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
                             <a className="navbar-brand" href="/">
-                                <img src="/Images/Profile.jpg" alt="logo" style={{ height: '100px', width: '100px', borderRadius: '50%' }} />
+                                <img src="/Images/resume-profile-03.jpg" alt="logo" style={{ height: '100px', width: '100px', borderRadius: '50%' }} />
                             </a>
-                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+                            <button className="navbar-toggler collapsed ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
                                 <span>MENU</span>
                             </button>
                         </div>
