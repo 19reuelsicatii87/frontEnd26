@@ -84,7 +84,7 @@ function About() {
                             Combines hands-on SDET expertise with test management and Agile leadership to embed
                             quality throughout the software delivery lifecycle.
                         </p>
-                        <p className='mb-0'>
+                        <p className='lead text-body-secondary mb-3'>
                             Experienced across Java, Selenium, Cucumber, TestNG, REST Assured, JMeter, CI/CD,
                             AWS, and modern web technologies. IBM Rational Functional Tester certified,
                             Scrum Master certified, and a Six Sigma Green Belt practitioner.
