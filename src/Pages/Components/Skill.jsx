@@ -1,273 +1,150 @@
-import React from 'react'
+const skillGroups = [
+    {
+        icon: 'bi-diagram-3',
+        title: 'Quality Leadership & Strategy',
+        description: 'Building quality into delivery through clear strategy, collaborative leadership, and risk-based execution.',
+        skills: [
+            'Test Strategy & Planning',
+            'QA & SDET Leadership',
+            'Agile & Scrum',
+            'Risk-Based Testing',
+            'Team Mentoring',
+            'Cross-Functional Delivery',
+            'Jira',
+            'PRINCE2',
+        ],
+    },
+    {
+        icon: 'bi-code-slash',
+        title: 'Test Automation Engineering',
+        description: 'Designing maintainable automation frameworks for reliable web and service-level validation.',
+        skills: [
+            'Java',
+            'Selenium WebDriver',
+            'Cucumber BDD',
+            'TestNG',
+            'REST Assured',
+            'Framework Architecture',
+            'Robot Framework',
+            'Appium',
+        ],
+    },
+    {
+        icon: 'bi-speedometer2',
+        title: 'API, Performance & Test Coverage',
+        description: 'Validating functionality, integrations, data, and production readiness across critical workflows.',
+        skills: [
+            'JMeter',
+            'Performance & Load Testing',
+            'Postman',
+            'API Testing',
+            'Database Validation & SQL',
+            'Web Application Testing',
+            'Mobile Testing',
+            'Windows Application Testing',
+            'Datadog',
+        ],
+    },
+    {
+        icon: 'bi-cloud-check',
+        title: 'CI/CD & AWS',
+        description: 'Integrating quality checks into delivery pipelines and supporting cloud-based releases.',
+        skills: [
+            'Jenkins',
+            'GitHub Actions',
+            'Maven',
+            'npm',
+            'Git & Bitbucket',
+            'AWS EC2 & ECS',
+            'CodePipeline, CodeBuild & CodeDeploy',
+            'CloudFront & Route 53',
+        ],
+    },
+    {
+        icon: 'bi-window',
+        title: 'Full-Stack Development',
+        description: 'Supporting quality engineering with practical knowledge across modern web application stacks.',
+        skills: [
+            'React',
+            'JavaScript',
+            'HTML & CSS',
+            'Bootstrap',
+            'Spring Boot',
+            'Laravel',
+            'ColdFusion',
+        ],
+    },
+]
+
+const enterpriseTools = [
+    'Microsoft TFS',
+    'IBM RFT, RMT & RCQ',
+    'HP QTP & Quality Center',
+    'Telerik Test Studio',
+    'Visual Studio CUIT, Web Performance & Load Test',
+    'TSO, ISPF, SPDF, QMF & File-Aid',
+]
 
 function Skill() {
     return (
-        <section id="skill">
+        <section id='skill' aria-labelledby='skills-heading'>
             <div className='container py-5'>
-                <h1 className='text-start text-primary'>
-                    <i className="bi bi-clipboard-check"
-                        style={{ fontSize: "35px" }}></i>
-                    {" "}Skill Set
-                </h1>
-                <div className='row'>
-                    <div className='col-md-6 px-5'>
-                        <div className='mb-4'>
-                            <h4 className='text-start text-primary'>Project Management</h4>
-                            <div className='container'>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Agile Project Management</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "80%" }} aria-valuenow="80" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>PRINCE 2</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='mb-4'>
-                            <h4 className='text-start text-primary'>Software Development</h4>
-                            <div className='container'>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>HTML, CSS and Javascript</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "85%" }} aria-valuenow="85" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>ReactJS</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "80%" }} aria-valuenow="80" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Bootstrap</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "75%" }} aria-valuenow="75" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Laravel</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='mb-4'>
-                            <h4 className='text-start text-primary'>Software Testing</h4>
-                            <div className='container'>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Auto and Manual WEB-APP</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "90%" }} aria-valuenow="90" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Auto and Manual WIN-APP</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Auto and Manual MOBILE</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "70%" }} aria-valuenow="70" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Auto and Manual API/DATABASE</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "55%" }} aria-valuenow="55" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div className='row justify-content-center mb-5'>
+                    <div className='col-lg-10 text-center'>
+                        <p className='text-primary fw-semibold text-uppercase mb-2'>
+                            Leadership, Engineering &amp; Delivery
+                        </p>
+                        <h2 id='skills-heading' className='display-6 fw-bold mb-3'>
+                            Technical Skills
+                        </h2>
+                        <p className='lead text-body-secondary mb-0'>
+                            A quality engineering toolkit spanning strategy, scalable automation,
+                            performance testing, cloud delivery, and hands-on software development.
+                        </p>
                     </div>
-                    <div className='col-md-6 px-5'>
-                        <div className='mb-4'>
-                            <h4 className='text-start text-primary'>Software Tools</h4>
-                            <div className='container'>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Microsoft - TFS</p>
+                </div>
+
+                <div className='row g-4'>
+                    {skillGroups.map((group, index) => (
+                        <div
+                            className={index === skillGroups.length - 1 ? 'col-lg-12' : 'col-md-6'}
+                            key={group.title}
+                        >
+                            <article className='card h-100 border-0 shadow-sm'>
+                                <div className='card-body p-4'>
+                                    <div className='d-flex align-items-center mb-3'>
+                                        <span
+                                            className='bg-primary-subtle text-primary rounded-circle d-inline-flex align-items-center justify-content-center me-3 flex-shrink-0'
+                                            style={{ width: '44px', height: '44px' }}
+                                        >
+                                            <i className={`bi ${group.icon} fs-5`} aria-hidden='true'></i>
+                                        </span>
+                                        <h3 className='h4 fw-bold mb-0'>{group.title}</h3>
                                     </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Atlassian - JIRA</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "95%" }} aria-valuenow="95" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Eclipse - Selenium, Appium, Robot & REST Assured</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "70%" }} aria-valuenow="70" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
+                                    <p className='text-body-secondary'>{group.description}</p>
+                                    <div className='d-flex flex-wrap gap-2'>
+                                        {group.skills.map((skill) => (
+                                            <span
+                                                className='badge rounded-pill bg-white text-primary border border-primary px-3 py-2'
+                                                key={skill}
+                                            >
+                                                {skill}
+                                            </span>
+                                        ))}
                                     </div>
                                 </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>JMeter - Performance Test</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "65%" }} aria-valuenow="65" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Postman - API Test</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "80%" }} aria-valuenow="80" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Visual Studio - CUIT, WebPerf & Load Test</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Maven, NPM, Jenkins, Bitbucket & GitHub</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "60%" }} aria-valuenow="60" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>IBM Test Tools – RFT, RMT, RCQ</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "55%" }} aria-valuenow="55" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>HP Test Tools – QTP, QC</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "50%" }} aria-valuenow="50" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Telerik – Test Studio</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "50%" }} aria-valuenow="50" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Mainframe – TSO, ISPF, SPDF, QMF, File-Aid</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "40%" }} aria-valuenow="40" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
+                            </article>
                         </div>
-                        <div className='mb-4'>
-                            <h4 className='text-start text-primary'>Software Infrastructure</h4>
-                            <div className='container'>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Netlify</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "80%" }} aria-valuenow="80" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div className='row mb-1'>
-                                    <div className='col-md- px-1'>
-                                        <p className='text-start fw-bold pb-0 mb-0'>Heroku</p>
-                                    </div>
-                                    <div className="progress px-0">
-                                        <div className="progress-bar"
-                                            role="progressbar" style={{ width: "80%" }} aria-valuenow="80" aria-valuemin="0"
-                                            aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    ))}
+                </div>
+
+                <div className='card border-0 bg-light mt-4'>
+                    <div className='card-body p-4'>
+                        <h3 className='h5 fw-bold mb-2'>
+                            <i className='bi bi-boxes text-primary me-2' aria-hidden='true'></i>
+                            Additional Enterprise Tools
+                        </h3>
+                        <p className='text-body-secondary mb-0'>{enterpriseTools.join(' · ')}</p>
                     </div>
                 </div>
             </div>

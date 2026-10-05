@@ -4,35 +4,7 @@ import { Link } from "react-router-dom"
 function Header() {
 
 
-    function header() {
 
-        if (window.location.href.includes("/scrummaster")) {
-            return (
-                sub()
-            )
-        }
-        else if (window.location.href.includes("/testmanager")) {
-            return (
-                sub()
-            )
-        }
-        else if (window.location.href.includes("/automationarchitect")) {
-            return (
-                sub()
-            )
-        }
-        else if (window.location.href.includes("/fullstackdeveloper")) {
-            return (
-                sub()
-            )
-        }
-        else {
-            return (
-                main()
-            )
-        }
-
-    }
 
     function main() {
         return (
@@ -91,26 +63,10 @@ function Header() {
         )
     }
 
-    function sub() {
-        return (
-            < div id="back" >
-                <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-                    <div className="container my-3 py-3">
-                        <div className='d-flex justify-content-end w-100'>
-                            <a className="nav-link active text-white fw-bold" href="/">
-                                <i className="bi bi-arrow-left"></i>
-                                {" "}Back
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div >
-        )
-    }
 
     return (
         <section id="header">
-            {header()}
+            {main()}
         </section>
     )
 }
