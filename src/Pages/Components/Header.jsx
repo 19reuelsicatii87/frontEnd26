@@ -1,50 +1,36 @@
-import React from 'react';
-import { Link } from "react-router-dom"
+import React, { useEffect } from 'react';
+import { Link, useLocation } from "react-router-dom"
 
 function Header() {
+    const location = useLocation();
 
+    useEffect(() => {
+        if (!location.hash) return;
+        const section = document.getElementById(location.hash.slice(1));
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+    }, [location.pathname, location.hash, location.key]);
 
-    function header() {
-
-        if (window.location.href.includes("/scrummaster")) {
-            return (
-                sub()
-            )
-        }
-        else if (window.location.href.includes("/testmanager")) {
-            return (
-                sub()
-            )
-        }
-        else if (window.location.href.includes("/automationarchitect")) {
-            return (
-                sub()
-            )
-        }
-        else if (window.location.href.includes("/fullstackdeveloper")) {
-            return (
-                sub()
-            )
-        }
-        else {
-            return (
-                main()
-            )
-        }
-
+    function closeMenu() {
+        const menu = document.getElementById('navbarColor03');
+        if (!menu || !menu.classList.contains('show') || !window.bootstrap) return;
+        const collapse = window.bootstrap.Collapse.getInstance(menu)
+            || new window.bootstrap.Collapse(menu, { toggle: false });
+        collapse.hide();
     }
+
+
 
     function main() {
         return (
             <div id="menu">
                 <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                     <div className="container">
-                        <div>
+                        <div className="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
                             <a className="navbar-brand" href="/">
-                                <img src="/Images/Profile.jpg" alt="logo" style={{ height: '100px', width: '100px', borderRadius: '50%' }} />
+                                <img src="/Images/resume-profile-03.jpg" alt="logo" style={{ height: '100px', width: '100px', borderRadius: '50%' }} />
                             </a>
-                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                                <span>MENU</span>
+                            <button className="navbar-toggler collapsed ms-auto text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style={{ border: '1.5px solid white' }}>
+                                <span >MENU</span>
                             </button>
                         </div>
 
@@ -53,15 +39,15 @@ function Header() {
 
                                 <ul className="navbar-nav me-auto">
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#banner">Home
+                                        <Link className="nav-link active" to="/#banner" onClick={closeMenu}>Home
                                             <span className="visually-hidden">(current)</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#about-me">About Me</a>
+                                        <Link className="nav-link active" to="/#about-me" onClick={closeMenu}>About Me</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#skill">Skills</a>
+                                        <Link className="nav-link active" to="/#skill" onClick={closeMenu}>Skills</Link>
                                     </li>
                                     <li className="nav-item dropdown">
                                         <a className="nav-link active dropdown-toggle"
@@ -69,18 +55,18 @@ function Header() {
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             Experience
                                         </a>
-                                        <ul className="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
-                                            <li><Link className="dropdown-item nav-link text-center fw-bold" to="/scrummaster">Scrum Master</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center fw-bold" to="/testmanager">Test Manager</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center fw-bold" to="/automationarchitect">Automation Architect</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center fw-bold" to="/fullstackdeveloper">Fullstack Developer</Link></li>
+                                        <ul className="dropdown-menu bg-primary" aria-labelledby="navbarDropdown" style={{ border: '1.5px solid white' }}>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/scrummaster" onClick={closeMenu}>Scrum Master</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/testmanager" onClick={closeMenu}>Test Manager</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/automationarchitect" onClick={closeMenu}>Automation Architect</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/fullstackdeveloper" onClick={closeMenu}>Fullstack Developer</Link></li>
                                         </ul>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#credential">Credentials</a>
+                                        <Link className="nav-link active" to="/#credential" onClick={closeMenu}>Credentials</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#contact">Contact Me</a>
+                                        <Link className="nav-link active" to="/#contact" onClick={closeMenu}>Contact Me</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -91,26 +77,10 @@ function Header() {
         )
     }
 
-    function sub() {
-        return (
-            < div id="back" >
-                <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-                    <div className="container my-3 py-3">
-                        <div className='d-flex justify-content-end w-100'>
-                            <a className="nav-link active text-white fw-bold" href="/">
-                                <i className="bi bi-arrow-left"></i>
-                                {" "}Back
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div >
-        )
-    }
 
     return (
         <section id="header">
-            {header()}
+            {main()}
         </section>
     )
 }
