@@ -15,8 +15,8 @@ function Header() {
                             <a className="navbar-brand" href="/">
                                 <img src="/Images/resume-profile-03.jpg" alt="logo" style={{ height: '100px', width: '100px', borderRadius: '50%' }} />
                             </a>
-                            <button className="navbar-toggler collapsed ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-                                <span>MENU</span>
+                            <button className="navbar-toggler collapsed ms-auto text-white fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style={{ border: '1.5px solid white' }}>
+                                <span >MENU</span>
                             </button>
                         </div>
 
@@ -41,11 +41,11 @@ function Header() {
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                             Experience
                                         </a>
-                                        <ul className="dropdown-menu bg-primary" aria-labelledby="navbarDropdown">
-                                            <li><Link className="dropdown-item nav-link text-center" to="/scrummaster">Scrum Master</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center" to="/testmanager">Test Manager</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center" to="/automationarchitect">Automation Architect</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center" to="/fullstackdeveloper">Fullstack Developer</Link></li>
+                                        <ul className="dropdown-menu bg-primary" aria-labelledby="navbarDropdown" style={{ border: '1.5px solid white' }}>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/scrummaster">Scrum Master</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/testmanager">Test Manager</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/automationarchitect">Automation Architect</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/fullstackdeveloper">Fullstack Developer</Link></li>
                                         </ul>
                                     </li>
                                     <li className="nav-item">
