@@ -1,8 +1,22 @@
-import React from 'react';
-import { Link } from "react-router-dom"
+import React, { useEffect } from 'react';
+import { Link, useLocation } from "react-router-dom"
 
 function Header() {
+    const location = useLocation();
 
+    useEffect(() => {
+        if (!location.hash) return;
+        const section = document.getElementById(location.hash.slice(1));
+        if (section) section.scrollIntoView({ behavior: 'smooth' });
+    }, [location.pathname, location.hash, location.key]);
+
+    function closeMenu() {
+        const menu = document.getElementById('navbarColor03');
+        if (!menu || !menu.classList.contains('show') || !window.bootstrap) return;
+        const collapse = window.bootstrap.Collapse.getInstance(menu)
+            || new window.bootstrap.Collapse(menu, { toggle: false });
+        collapse.hide();
+    }
 
 
 
@@ -25,15 +39,15 @@ function Header() {
 
                                 <ul className="navbar-nav me-auto">
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#banner">Home
+                                        <Link className="nav-link active" to="/#banner" onClick={closeMenu}>Home
                                             <span className="visually-hidden">(current)</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#about-me">About Me</a>
+                                        <Link className="nav-link active" to="/#about-me" onClick={closeMenu}>About Me</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#skill">Skills</a>
+                                        <Link className="nav-link active" to="/#skill" onClick={closeMenu}>Skills</Link>
                                     </li>
                                     <li className="nav-item dropdown">
                                         <a className="nav-link active dropdown-toggle"
@@ -42,17 +56,17 @@ function Header() {
                                             Experience
                                         </a>
                                         <ul className="dropdown-menu bg-primary" aria-labelledby="navbarDropdown" style={{ border: '1.5px solid white' }}>
-                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/scrummaster">Scrum Master</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/testmanager">Test Manager</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/automationarchitect">Automation Architect</Link></li>
-                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/fullstackdeveloper">Fullstack Developer</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/scrummaster" onClick={closeMenu}>Scrum Master</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/testmanager" onClick={closeMenu}>Test Manager</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/automationarchitect" onClick={closeMenu}>Automation Architect</Link></li>
+                                            <li><Link className="dropdown-item nav-link text-center text-white" to="/fullstackdeveloper" onClick={closeMenu}>Fullstack Developer</Link></li>
                                         </ul>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#credential">Credentials</a>
+                                        <Link className="nav-link active" to="/#credential" onClick={closeMenu}>Credentials</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link active" href="#contact">Contact Me</a>
+                                        <Link className="nav-link active" to="/#contact" onClick={closeMenu}>Contact Me</Link>
                                     </li>
                                 </ul>
                             </div>
